@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:animateLayoutChanges="true"
+    tools:context=".InfMirrorMainMenu" >
+
+    <SeekBar
+        android:id="@+id/RedSlider"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:progressDrawable="@drawable/red_scrubber_progress_horizontal_holo_dark"
+        android:thumb="@drawable/red_scrubber_control_selector_holo_dark"
+        android:layout_marginTop="400dp" />
+
+    <SeekBar
+        android:id="@+id/GreenSlider"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/green_scrubber_progress_horizontal_holo_dark"
+        android:thumb="@drawable/green_scrubber_control_selector_holo_dark"
+        android:layout_marginTop="450dp" />
+
+    <SeekBar
+        android:id="@+id/BlueSlider"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp" />
+
+    <TextView
+        android:id="@+id/redValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/RedSlider"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/RedSlider"
+        android:layout_toRightOf="@+id/RedSlider"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/greenValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/GreenSlider"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/GreenSlider"
+        android:layout_toRightOf="@+id/GreenSlider"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/blueValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BlueSlider"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/BlueSlider"
+        android:layout_toRightOf="@+id/GreenSlider"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="Connect" />
+
+    <Button
+        android:id="@+id/autobutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RedSlider"
+        android:layout_centerVertical="true"
+        android:text="Auto" />
+
+    <Button
+        android:id="@+id/tempButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autobutton"
+        android:layout_below="@+id/autobutton"
+        android:layout_marginTop="23dp"
+        android:text="Temp" />
+
+    <Button
+        android:id="@+id/onButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/autobutton"
+        android:layout_alignLeft="@+id/autobutton"
+        android:layout_marginBottom="22dp"
+        android:text="On" />
+
+    <Button
+        android:id="@+id/offButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/onButton"
+        android:layout_alignBottom="@+id/onButton"
+        android:layout_alignLeft="@+id/onButton"
+        android:text="Off"
+        android:visibility="invisible" />
+
+</RelativeLayout>
